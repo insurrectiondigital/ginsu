@@ -30,3 +30,13 @@ thoroughly battle-tested and debugged.
 **If NOT Traveling Ruby**, perhaps I can rig up some simple script to emulate
 a `*nix` Ruby environment for the three major platforms, ship it myself.
 *Maybe...*
+
+### Launcher Script?
+
+If running on OS X or Linux we can utilize `bash` as a lowest-common-denominator
+to write a basic launcher script. But on Windows, `bash` isn't typically
+available (at least until Microsoft ships their Windows 10 Linux syscalls
+feature later in 2016; even then though, I wouldn't want to *count* on it).
+Ergo, I'm wondering if it would be better to write the launcher script itself
+in totally pure Ruby. Not sure how sane, maintainable or portable that is, or
+if it'll be a total :facepalm: moment, but it's a thought.
