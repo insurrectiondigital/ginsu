@@ -42,14 +42,36 @@ class Ginsu
     HOMEPAGE = "https://github.com/insurrectiondigital/ginsu"
 
     #
+    # LICENSE tells the user what license this tool is distributed under. This
+    # particular tool is open source and offered free of charge (and free as
+    # in *freedom*) to the global internet community at large under the MIT
+    # license. Basically, all I want is protection from bottom-feeding lawsuit
+    # jockeys. Use at your own risk, etc. etc. which the MIT license seems
+    # to do relatively well and not encumber others who want to use, fork or
+    # improve the tool in some way.
+    #
+    LICENSE = 'MIT'
+
+    #
+    # LICENSE_URL specifies where you can read the license file online.
+    # Purely for convenience reasons.
+    #
+    LICENSE_URL = "#{HOMEPAGE}/LICENSE"
+
+    #
     # A written, short summary of what this tool does.
     #
-    SUMMARY = "Gigantic file? Slice it into pieces with ginsu! (Also restores.)"
+    SUMMARY <<~EOF
+      Gigantic file? Slice it into pieces with `ginsu`! Or, join slices made \
+      with `ginsu` to restore the original file to any path you specify. Makes \
+      backups much easier due to network corruption and file size storage \
+      limitations.
+    EOF
 
     #
     # A much longer and more detailed description of how `ginsu` works.
     #
-    DESCRIPTION <<-EOF
+    DESCRIPTION <<~EOF
       # Files too big? Slice 'em up with `ginsu`!
 
       Say you have a huge backup archive that you want to upload to some
@@ -105,8 +127,9 @@ class Ginsu
 
       ## Interested yet?
 
-      Yeah, I thought so. Head on over to #{Ginsu::Meta::HOMEPAGE} to read
-      more about this tool.
+      Yeah, I thought so. Head on over to the
+      [ginsu GitHub repository](#{Ginsu::Meta::HOMEPAGE}) to read more about
+      this tool.
     EOF
   end
 end
