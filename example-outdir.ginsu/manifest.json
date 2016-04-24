@@ -7,12 +7,17 @@
     [
         {
           "total-bytes": 524288000,
-          "name": "archive.tar.bz2-10d783e71682b81d87d7cf2c624f57ff.0",
+          "name": "10d783e71682b81d87d7cf2c624f57ff.0.ginsu-slice",
           "md5sum": "some md5sum; might also try adler32 or crc32"
         },
         {
           "total-bytes": 524288000,
-          "name": "archive.tar.bz2-10d783e71682b81d87d7cf2c624f57ff.0",
+          "name": "10d783e71682b81d87d7cf2c624f57ff.1.ginsu-slice",
+          "md5sum": "some md5sum; might also try adler32 or crc32"
+        },
+        {
+          "total-bytes": 524288000,
+          "name": "10d783e71682b81d87d7cf2c624f57ff.1.ginsu-slice",
           "md5sum": "some md5sum; might also try adler32 or crc32"
         },
         {
