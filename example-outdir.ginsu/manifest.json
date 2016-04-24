@@ -1,0 +1,106 @@
+{
+  "file": {
+    "name": "archive.tar.bz2",
+    "total-bytes": 46493671424,
+    "md5sum": "10d783e71682b81d87d7cf2c624f57ff",
+    "slices":
+    [
+        {
+          "total-bytes": 524288000,
+          "name": "archive.tar.bz2-10d783e71682b81d87d7cf2c624f57ff.0",
+          "md5sum": "some md5sum; might also try adler32 or crc32"
+        },
+        {
+          "total-bytes": 524288000,
+          "name": "archive.tar.bz2-10d783e71682b81d87d7cf2c624f57ff.0",
+          "md5sum": "some md5sum; might also try adler32 or crc32"
+        },
+        {
+          "...": "...and on and on we go until we have all slices accounted for"
+        }
+    ],
+    "metadata": {
+      "filename": "projects-backup-2016-04-24.tar.bz2",
+      "filepath": "/Users/jondoe/Desktop",
+      "hostname": "JonDoesMacBookPro",
+      "datetime": "1461505025",
+      "os-version": "RUBY_PLATFORM",
+      "user": "jondoe",
+      "path": "/usr/local/bin:/usr/bin:/bin",
+      "ginsu": {
+        "path": "/usr/local/bin/ginsu",
+        "version": "0.0.1"
+      },
+      "ruby": {
+        "path": "/usr/local/bin/ruby",
+        "version": "2.2.3",
+        "engine": "jruby",
+        "platform": "x86_64-darwin15",
+        "env": {
+          "ENVIRONMENT": "VARIABLES",
+          "THAT": "THE RUBY INTERPRETER",
+          "HAD": "AT RUNTIME",
+          "WILL": "GO HERE"
+        },
+        "zlib": {
+          "VERSON": "Zlib::THIS value here",
+          "ZLIB_VERSION": "Zlib::THIS value here",
+          "BINARY": "Zlib::THIS value here",
+          "ASCII": "Zlib::THIS value here",
+          "TEXT": "Zlib::THIS value here",
+          "UNKNOWN": "Zlib::THIS value here",
+          "NO_COMPRESSION": "Zlib::THIS value here",
+          "BEST_SPEED": "Zlib::THIS value here",
+          "BEST_COMPRESSION": "Zlib::THIS value here",
+          "DEFAULT_COMPRESSION": "Zlib::THIS value here",
+          "FILTERED": "Zlib::THIS value here",
+          "HUFFMAN_ONLY": "Zlib::THIS value here",
+          "RLE": "Zlib::THIS value here",
+          "FIXED": "Zlib::THIS value here",
+          "DEFAULT_STRATEGY": "Zlib::THIS value here",
+          "MAX_WBITS": "Zlib::THIS value here",
+          "DEF_MEM_LEVEL": "Zlib::THIS value here",
+          "MAX_MEM_LEVEL": "Zlib::THIS value here",
+          "NO_FLUSH": "Zlib::THIS value here",
+          "SYNC_FLUSH": "Zlib::THIS value here",
+          "FULL_FLUSH": "Zlib::THIS value here",
+          "FINISH": "Zlib::THIS value here",
+          "OS_CODE": "Zlib::THIS value here",
+          "OS_MSDOS": "Zlib::THIS value here",
+          "OS_AMIGA": "Zlib::THIS value here",
+          "OS_VMS": "Zlib::THIS value here",
+          "OS_UNIX": "Zlib::THIS value here",
+          "OS_ATARI": "Zlib::THIS value here",
+          "OS_OS2": "Zlib::THIS value here",
+          "OS_MACOS": "Zlib::THIS value here",
+          "OS_TOPS20": "Zlib::THIS value here",
+          "OS_WIN32": "Zlib::THIS value here",
+          "OS_VMCMS": "Zlib::THIS value here",
+          "OS_ZSYSTEM": "Zlib::THIS value here",
+          "OS_CPM": "Zlib::THIS value here",
+          "OS_QDOS": "Zlib::THIS value here",
+          "OS_RISCOS": "Zlib::THIS value here",
+          "OS_UNKNOWN": "Zlib::THIS value here"
+        },
+        "gem": {
+          "ruby": "Gem.ruby",
+          "version": "Gem.version || Gem::VERSION => 2.5.1",
+          "user_dir": "Gem.user_dir /home/youruser/.rbenv/versions/2.3.0/gem",
+          "user_home": "Gem.user_home /home/youruser",
+          "dir": "Gem.dir /Users/you/.rbenv/versions/2.3.0/lib/ruby/gems/...",
+          "win_platform": "Gem.win_platform? (value should be just false)",
+          "config": {
+            "file": "Gem.config_file /home/youruser/.gemrc",
+            "contents": "File.read(Gem.config_file) (maybe base64 encode for space?)"
+          },
+          "LOAD_PATH": [
+            "This will contain contents of $LOAD_PATH, one entry per element",
+            "/Users/you/.rbenv/...",
+            "/Users/you/.rbenv/....",
+            "/Users/you/.rbenv/.../and/so/on/..."
+          ]
+        }
+      }
+    }
+  }
+}
