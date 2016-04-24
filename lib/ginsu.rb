@@ -2,6 +2,7 @@
 
 
 require_relative 'ginsu/logging'
+require_relative 'ginsu/runtime'
 require_relative 'ginsu/debug'
 require_relative 'ginsu/bytes'
 require_relative 'ginsu/cli'
@@ -9,6 +10,7 @@ require_relative 'ginsu/os'
 
 class Ginsu
   include Ginsu::Logging
+  include Ginsu::Runtime
   include Ginsu::Debug
   include Ginsu::Bytes
   include Ginsu::CLI
