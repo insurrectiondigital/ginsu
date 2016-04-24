@@ -179,3 +179,13 @@ specified as the second argument when invoking `ginsu slice`.
 To see what this looks like after all is said and done, look at the contents
 of the [`example-outdir.ginsu`](example-outdir.ginsu/) directory in this
 repository.
+
+
+## Future Features / Goals
+
++ Encryption with GPG and/or SSH keys somehow some way; **this doesn't do
+any encryption or other protection of your data right now - that's your
+responsibility.**
++ Internal and/or automatic compression via `Zlib`. With tuneable options.
++ Automatic and/or configurable post-slice upload to Amazon Cloud Drive, other
+options to be added according to community contribution.
