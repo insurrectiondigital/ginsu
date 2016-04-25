@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ginsu/meta' # includes version info
 
 Gem::Specification.new do |spec|
-  spec.name             =       "ginsu"
+  spec.name             =       Ginsu::Meta::GEM_NAME
   spec.version          =       Ginsu::Meta::VERSION
-  spec.authors          =       ["J. Austin Hughey"]
-  spec.email            =       ["jaustinhughey@gmail.com"]
+  spec.authors          =       Ginsu::Meta::AUTHORS
+  spec.email            =       Ginsu::Meta::EMAILS
   spec.description      =       Ginsu::Meta::DESCRIPTION
   spec.summary          =       Ginsu::Meta::SUMMARY
   spec.homepage         =       Ginsu::Meta::HOMEPAGE
@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry", "~> 0.10.3"
 end

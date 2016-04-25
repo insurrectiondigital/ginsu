@@ -92,9 +92,9 @@ class Ginsu
       # RubyGems itself thinks, so now let's see if Bundler is in the
       # equation at all and what's going on with it.
       #
-      
-      :bundler => {
 
+      :bundler => {
+        :version => "TODO"
       }
     }
   end

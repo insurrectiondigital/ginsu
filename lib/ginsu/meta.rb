@@ -1,6 +1,31 @@
 class Ginsu
   module Meta
     #
+    # AUTHORS
+    #
+    # Array representing the author(s) of this tool. Used in `gemspec`.
+    #
+    AUTHORS = ["J. Austin Hughey"]
+
+    #
+    # EMAIL
+    #
+    # Array of each author's email address.
+    #
+    EMAILS = ["jah@insurrection.cc"]
+
+
+    #
+    # GEM_NAME
+    #
+    # String representing the name of this gem as it'll be referenced by
+    # the RubyGems API. This is what goes in `gem install` and `require` for
+    # example.
+    #
+    GEM_NAME = 'ginsu'
+
+
+    #
     # VERSION sets the application's current version. Definitely trying to go
     # for a simplified [Semantic Versioning](http://semver.org) scheme here,
     # where A.B.C would be the pattern:
@@ -61,7 +86,7 @@ class Ginsu
     #
     # A written, short summary of what this tool does.
     #
-    SUMMARY <<~EOF
+    SUMMARY = <<~EOF
       Gigantic file? Slice it into pieces with `ginsu`! Or, join slices made \
       with `ginsu` to restore the original file to any path you specify. Makes \
       backups much easier due to network corruption and file size storage \
@@ -71,7 +96,7 @@ class Ginsu
     #
     # A much longer and more detailed description of how `ginsu` works.
     #
-    DESCRIPTION <<~EOF
+    DESCRIPTION = <<~EOF
       # Files too big? Slice 'em up with `ginsu`!
 
       Say you have a huge backup archive that you want to upload to some
