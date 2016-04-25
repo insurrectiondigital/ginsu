@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require 'ginsu'
+require 'pry'
+
+#
+# Console invocation via `pry` (gem install pry)
+#
+Pry.start
