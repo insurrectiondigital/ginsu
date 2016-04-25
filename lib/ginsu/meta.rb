@@ -156,5 +156,29 @@ class Ginsu
       [ginsu GitHub repository](#{Ginsu::Meta::HOMEPAGE}) to read more about
       this tool.
     EOF
+
+    #
+    # POST_INSTALL_MESSAGE
+    #
+    # A message to be printed out after this gem is installed. Called from
+    # `ginsu.gemspec`. Should explain to the user that the gem is intalled
+    # and that they need only type the command `ginsu` and help will appear;
+    # otherwise, visit Ginsu::Meta::HOMEPAGE for detailed documentation.
+    #
+    POST_INSTALL_MESSAGE = <<~EOF
+
+      Thanks for installing ginsu!
+
+      To get started, just type 'ginsu help' and hit enter. You'll be shown
+      some simple help text to get you started.
+
+      For detailed documentation, to report issues/bugs, and/or review the
+      source code, visit ginsu's GitHub repository:
+
+        #{Ginsu::Meta::HOMEPAGE}
+
+      That's all you need to get started. Good luck!
+
+    EOF
   end
 end

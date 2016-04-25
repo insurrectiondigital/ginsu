@@ -1,20 +1,35 @@
 #!/usr/bin/env ruby
+#
+# ginsu.rb
+#   lib/ginsu.rb
+#
+# Primary application bootstrap and entry point.
+# Loads necessary dependencies via `require` with
+# RubyGems and its ways of messing with $LOAD_PATH.
+#
+# The `ginsu` binary under `bin/ginsu` is how this tool
+# should be invoked from the command line. For example:
+#
+#     $ echo $PWD
+#     /somewhere/on/disk/ginsu
+#     $ bin/ginsu <args>
+#
 
-
-require_relative 'ginsu/logging'
-require_relative 'ginsu/runtime'
-require_relative 'ginsu/debug'
-require_relative 'ginsu/bytes'
-require_relative 'ginsu/cli'
-require_relative 'ginsu/os'
+require 'ginsu/logging'
+require 'ginsu/runtime'
+require 'ginsu/bytes'
+require 'ginsu/cli'
+require 'ginsu/os'
 
 class Ginsu
-  include Ginsu::Logging
-  include Ginsu::Runtime
-  include Ginsu::Debug
-  include Ginsu::Bytes
-  include Ginsu::CLI
-  include Ginsu::OS
+
+  #
+  # VERSION
+  #
+  # Import the constant VERSION from Ginsu::Meta so that
+  # other tools expecting VERSION to be present don't break.
+  #
+  VERSION = Ginsu::Meta::VERSION
 
   def initialize
 

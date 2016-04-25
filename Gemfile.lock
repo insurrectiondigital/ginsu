@@ -2,10 +2,12 @@ PATH
   remote: .
   specs:
     ginsu (0.0.1)
+      toml-rb (~> 0.3.14)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    citrus (3.0.2)
     coderay (1.1.1)
     method_source (0.8.2)
     pry (0.10.3)
@@ -14,6 +16,8 @@ GEM
       slop (~> 3.4)
     rake (10.5.0)
     slop (3.6.0)
+    toml-rb (0.3.14)
+      citrus (~> 3.0, > 3.0)
 
 PLATFORMS
   ruby

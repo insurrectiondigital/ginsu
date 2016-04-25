@@ -6,6 +6,7 @@ around where my head's at with these ideas.
 
 # TODO/Wishlist
 
++ Release idea: quick screencast and/or "gifcast" showing the tool in use
 + Switch over to a less collision-prone hashing algorithm,
 especially for small files (e.g. `ginsu slice ... 256k`) by using the
 [rbnacl-libsodium](https://github.com/cryptosphere/rbnacl-libsodium) library
@@ -146,3 +147,86 @@ in totally pure Ruby. Not sure how sane, maintainable or portable that is, or
 if it'll be a total :facepalm: moment, but it's a thought.
 
 Good idea that this guy puts in a thread/discussion on traveling ruby:
+
+### RubyGems Platforms
+
+If telling RubyGems to load specific things on specific platforms, you have to
+know what internal strings it wants for any given platform. Sadly, finding
+this wasn't as easy as it should have been, hence my copying it here:
+
+```
+:ruby, :ruby_XY
+Matches non-windows, non-jruby implementations where X and Y can be used to match releases in the 1.8, 1.9, 2.0 or 2.1 series.
+
+:mri, :mri_XY
+Matches non-windows C Ruby (Matz Ruby) or only the 1.8, 1.9, 2.0 or 2.1 series.
+
+:mingw, :mingw_XY
+Matches 32 bit C Ruby on MinGW or only the 1.8, 1.9, 2.0 or 2.1 series.
+
+:x64_mingw, :x64_mingw_XY
+Matches 64 bit C Ruby on MinGW or only the 1.8, 1.9, 2.0 or 2.1 series.
+
+:mswin, :mswin_XY
+Matches 32 bit C Ruby on Microsoft Windows or only the 1.8, 1.9, 2.0 or 2.1 series.
+
+:mswin64, :mswin64_XY
+Matches 64 bit C Ruby on Microsoft Windows or only the 1.8, 1.9, 2.0 or 2.1 series.
+
+:jruby, :jruby_XY
+Matches JRuby or JRuby in 1.8 or 1.9 mode.
+
+:maglev
+Matches Maglev
+
+:rbx
+Matches non-windows Rubinius
+
+NOTE: There is inconsistency in what environment a platform matches. You may need to read the source to know the exact details.
+```
+
+Source: [docs.seattlerb.org](http://docs.seattlerb.org/rubygems/Gem/RequestSet/GemDependencyAPI.html#method-i-platform)
+
+### Various RubyGems ENV vars
+
+```
+$ gem environment
+RubyGems Environment:
+  - RUBYGEMS VERSION: 2.5.1
+  - RUBY VERSION: 2.3.0 (2015-12-25 patchlevel 0) [x86_64-darwin15]
+  - INSTALLATION DIRECTORY: /Users/jah/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0
+  - USER INSTALLATION DIRECTORY: /Users/jah/.gem/ruby/2.3.0
+  - RUBY EXECUTABLE: /Users/jah/.rbenv/versions/2.3.0/bin/ruby
+  - EXECUTABLE DIRECTORY: /Users/jah/.rbenv/versions/2.3.0/bin
+  - SPEC CACHE DIRECTORY: /Users/jah/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /Users/jah/.rbenv/versions/2.3.0/etc
+  - RUBYGEMS PLATFORMS:
+    - ruby
+    - x86_64-darwin-15
+  - GEM PATHS:
+     - /Users/jah/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0
+     - /Users/jah/.gem/ruby/2.3.0
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => false
+     - :bulk_threshold => 1000
+     - :sources => ["https://rubygems.org/"]
+     - "gem" => "--no-ri --no-rdoc"
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /Users/jah/.rbenv/versions/2.3.0/bin
+     - /Users/jah/.rbenv/libexec
+     - /Users/jah/.rbenv/plugins/ruby-build/bin
+     - /Users/jah/.gopath/bin
+     - /Users/jah/.rbenv/shims
+     - /Users/jah/.rbenv/bin
+     - /Users/jah/.bin
+     - /usr/local/bin
+     - /usr/bin
+     - /bin
+     - /usr/sbin
+     - /sbin
+     - /usr/local/opt/go/libexec/bin
+```

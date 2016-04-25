@@ -1,5 +1,3 @@
-require 'rubygems'
-
 class Ginsu
   module Runtime
     @ruby = {
