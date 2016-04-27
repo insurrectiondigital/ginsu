@@ -24,7 +24,6 @@ class Ginsu
     #
     GEM_NAME = 'ginsu'
 
-
     #
     # VERSION sets the application's current version. Definitely trying to go
     # for a simplified [Semantic Versioning](http://semver.org) scheme here,
@@ -179,6 +178,19 @@ class Ginsu
 
       That's all you need to get started. Good luck!
 
+    EOF
+
+    #
+    # DOCUMENTATION
+    #
+    # Tells the user where they can find more documentation for this gem.
+    # This is usually going to be a link to an http url, but could also be
+    # a location on disk. Not a parsed/programmatically-used value, purely
+    # to be read (glanced at, really) by the user. But do keep it short.
+    #
+    DOCUMENTATION = <<~EOF
+      More documentation and examples can be found online at our GitHub repo:
+        https://github.com/insurrectiondigital/ginsu
     EOF
   end
 end
