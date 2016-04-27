@@ -1,20 +1,3 @@
-#!/usr/bin/env ruby
-#
-# ginsu.rb
-#   lib/ginsu.rb
-#
-# Primary application bootstrap and entry point.
-# Loads necessary dependencies via `require` with
-# RubyGems and its ways of messing with $LOAD_PATH.
-#
-# The `ginsu` binary under `bin/ginsu` is how this tool
-# should be invoked from the command line. For example:
-#
-#     $ echo $PWD
-#     /somewhere/on/disk/ginsu
-#     $ bin/ginsu <args>
-#
-
 require 'ginsu/logging'
 require 'ginsu/runtime'
 require 'ginsu/bytes'
@@ -30,58 +13,6 @@ class Ginsu
   # other tools expecting VERSION to be present don't break.
   #
   VERSION = Ginsu::Meta::VERSION
-
-  def initialize
-
-    #
-    # Called via CLI like so:
-    #
-    #   ginsu slice bigfile output-dir 250M
-    #           ^      ^       ^        ^
-    #     ARGV  0      1       2        3
-
-    #
-    # ARGV needs at least 3 total parameters, so fail hard and fast if we
-    # don't have at least that.
-    #
-    # TODO: Implement a logging interface that pushes log messages to
-    # STDOUT, STDERR, and *maybe* a central logging location (e.g. syslog?)
-    # as long as it doesn't require elevated privileges.
-    #
-    # TODO: Make stuff going to STDOUT pretty and colorized if the terminal
-    # supports it and/or unless a `--no-color` option gets passed in.
-    #
-    unless ARGV.count >= 3
-      puts "ERROR: Missing necessary arguments. Try `ginsu help`."
-      Process.exit(1)
-    end
-
-    source = ARGV[1]
-    dest = ARGV[2]
-
-    # TODO: Check all input params to ensure they're legit (see below)
-    # For now we're assuming they are just for spiking purposes.
-
-    # Check and figure out what slice size the user wants. Should be in a
-    # format like `1G` or `250mb` or something.
-    units = (ARGV[3].chars.select { |x| x.match(/\D/i) })[0].downcase # m/k/g
-    size  = (ARGV[3].downcase).split(units) # the number, e.g. 100
-
-    # Sanity Check: Let the user know what we found via CLI.
-    puts <<-EOF
-ginsu is getting ready to slice things up real nice for ya!
-
-  Origin: #{ARGV[1]}
-    Size: TODO: File Size Here
-
-  Destination: #{ARGV[2]}
-    Size: #{size}#{units.upcase}B slices.
-EOF
-
-
-
-
-  end
 
   #
   # Basic idea here is to do this as follows:
