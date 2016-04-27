@@ -1,10 +1,22 @@
 require 'ginsu/logging'
 require 'ginsu/runtime'
-require 'ginsu/bytes'
+require 'ginsu/buffer'
+require 'ginsu/meta'
 require 'ginsu/cli'
 require 'ginsu/os'
 
 class Ginsu
+  #
+  # Ginsu::Bytes
+  #
+  # Define the size of each type of byte (GB, MB, KB, etc.) for convenience.
+  # We now have Ginsu::MEGABYTES, Ginsu::GIGABYTE, etc.
+  #
+  # TODO: Extend a base class or add global constants for these values instead,
+  # making extending classes and such less needed and access to those things
+  # much, much easier.
+  #
+  extend Ginsu::Bytes
 
   #
   # VERSION
