@@ -14,7 +14,6 @@ class Ginsu
     #
     EMAILS = ["jah@insurrection.cc"]
 
-
     #
     # GEM_NAME
     #

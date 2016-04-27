@@ -16,7 +16,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 # convenience). May be added to in the future, but all the required
 # params for Rubygems need to go in the Ginsu::Meta class as constants.
 #
-require 'ginsu/meta' # includes version info
+require 'ginsu/meta'
 
 #
 # Main Gem Specification
