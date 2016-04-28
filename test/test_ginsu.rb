@@ -7,6 +7,6 @@ class TestGinsuMain < Minitest::Test
   end
 
   def test_has_version
-    assert Ginsu::VERSION
+    assert_match /(\d+)\.(\d+)\.(\d+)(.*)/, Ginsu::VERSION
   end
 end
