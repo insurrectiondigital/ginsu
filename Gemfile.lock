@@ -10,6 +10,7 @@ GEM
     citrus (3.0.2)
     coderay (1.1.1)
     method_source (0.8.2)
+    minitest (5.8.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -25,6 +26,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.11)
   ginsu!
+  minitest (~> 5.8.4)
   pry (~> 0.10.3)
   rake (~> 10.0)
 
