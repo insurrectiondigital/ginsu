@@ -1,5 +1,6 @@
 require 'ginsu/logging'
 require 'ginsu/runtime'
+require 'ginsu/config'
 require 'ginsu/buffer'
 require 'ginsu/meta'
 require 'ginsu/cli'
