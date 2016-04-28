@@ -1,21 +1,5 @@
-# coding: utf-8
-
-#
-# Alter $LOAD_PATH for ease of `require` below.
-#
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
-#
-# ginsu/meta
-#
-# Holds all the metadata for this gem, including but not limited to
-# version, authors, emails, description, summary, homepage, license
-# and a post-install message. Also includes a documentation link and
-# LICENSE_URL so the user can go online to view either (purely for
-# convenience). May be added to in the future, but all the required
-# params for Rubygems need to go in the Ginsu::Meta class as constants.
-#
 require 'ginsu/meta'
 
 #
@@ -47,23 +31,14 @@ Gem::Specification.new do |spec|
   #
   # spec.files
   #
-  # Assign the total list of files to this gem so that RubyGems knows its
-  # inventory when it tries to bundle this thing up.
-  # Reference:
-  #   http://guides.rubygems.org/specification-reference/#files
-  #
-  spec.files  = Dir['lib/**/*.rb'] + Dir['bin/*'] + Dir['[A-Z]*']
-  spec.files += Dir['test/**/*'] + Dir['readme.md']
+  spec.files  = Dir['lib/**/*.rb', '[A-Z]*', 'readme.md', 'doc/**/*.md']
 
   #
-  # Tell RubyGems where the binaries are for this thing, and which
-  # binaries/scripts to install such that they'll be available
-  # directly from the command line. For example `gem install ginsu`
-  # should make the executable `ginsu` available system-wide in
-  # the user's $PATH.
+  # spec.bindir and spec.executables tell Rubygems where your binaries are
+  # and which executables to ship under that binaries directory.
   #
   spec.bindir = "bin"
-  spec.executables = Dir['bin/ginsu']
+  spec.executables = ['ginsu']
 
   #
   # What to append to $LOAD_PATH when the gem is required. This is
@@ -114,8 +89,6 @@ Gem::Specification.new do |spec|
   # packaged gem.
   #
   spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "pry", "~> 0.10.3"
 
   #
   # Runtime dependencies: these SHOULD ship with the packaged gem.
