@@ -1,3 +1,5 @@
+require 'zlib'
+
 class Ginsu
   module Runtime
     @ruby = {
