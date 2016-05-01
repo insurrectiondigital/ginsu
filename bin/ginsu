@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+#
+# ginsu cli executable
+#
+# Loads up the ginsu gem, parses CLI commands and options, then triggers the
+# appropriate ginsu code.
+#
+require 'ginsu'
+Ginsu::CLI.new.start

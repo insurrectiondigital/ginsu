@@ -78,7 +78,5 @@ task :'serve-coverage' do
     When finished, use CTRL+C to exit this process.
 
   EOF
-
   server.start
-
 end

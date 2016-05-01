@@ -6,14 +6,14 @@ require 'ginsu/meta'
 # Main Gem Specification
 #
 Gem::Specification.new do |spec|
-  spec.name             =       Ginsu::Meta::GEM_NAME
-  spec.version          =       Ginsu::Meta::VERSION
-  spec.authors          =       Ginsu::Meta::AUTHORS
-  spec.email            =       Ginsu::Meta::EMAILS
-  spec.description      =       Ginsu::Meta::DESCRIPTION
-  spec.summary          =       Ginsu::Meta::SUMMARY
-  spec.homepage         =       Ginsu::Meta::HOMEPAGE
-  spec.license          =       Ginsu::Meta::LICENSE
+  spec.name                 = Ginsu::Meta::GEM_NAME
+  spec.version              = Ginsu::Meta::VERSION
+  spec.authors              = Ginsu::Meta::AUTHORS
+  spec.email                = Ginsu::Meta::EMAILS
+  spec.description          = Ginsu::Meta::DESCRIPTION
+  spec.summary              = Ginsu::Meta::SUMMARY
+  spec.homepage             = Ginsu::Meta::HOMEPAGE
+  spec.license              = Ginsu::Meta::LICENSE
   spec.post_install_message = Ginsu::Meta::POST_INSTALL_MESSAGE
 
   #
@@ -31,7 +31,12 @@ Gem::Specification.new do |spec|
   #
   # spec.files
   #
-  spec.files  = Dir['lib/**/*.rb', '[A-Z]*', 'readme.md', 'doc/**/*.md']
+  spec.files  = Dir[
+    'lib/**/*.rb',
+    '[A-Z]*',
+    'readme.md',
+    'doc/**/*.md'
+  ]
 
   #
   # spec.bindir and spec.executables tell Rubygems where your binaries are
@@ -94,4 +99,5 @@ Gem::Specification.new do |spec|
   # Runtime dependencies: these SHOULD ship with the packaged gem.
   #
   spec.add_runtime_dependency "toml-rb", "~> 0.3.14"
+  spec.add_runtime_dependency "commander", "~> 4.4.0"
 end
