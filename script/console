@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+#
+# script/console
+#
+# Fires up a simple console using pry and with the 'ginsu' gem already loaded.
+#
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'ginsu'
+require 'pry'
+
+Pry.start
