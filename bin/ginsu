@@ -6,4 +6,24 @@
 # appropriate ginsu code.
 #
 require 'ginsu'
-Ginsu::CLI.new.start
+
+#
+# Attempt to trap and parse all the arguments from the shell at
+# the time of invocation.
+#
+# GENERAL SYNTAX:
+#               ginsu ACTION SUBJECT [options]
+#
+#   ACTION:     The verb/command to carry out.
+#               [slice, join, status]
+#
+#   SUBJECT:    Location to a .ginsu directory or raw file on which
+#               to perform ACTION. For example, "ginsu slice myfile.tar"
+#
+#   [options]:  Optional things to pass to ACTION. What they do depends on
+#               the ACTION invoked. E.g. --verbose --json --md5 --sha1
+#
+
+@ginsu = Ginsu.new(ARGV[1], ARGV[2])
+# TODO: @ginsu.options
+# @ginsu.options = ()

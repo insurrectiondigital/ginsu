@@ -10,6 +10,25 @@ require 'ginsu/os'
 
 class Ginsu
   #
+  # Every Ginsu object has at the very minimum three attributes:
+  #
+  #   action: the thing you wanna do;
+  #   subject: what you wanna do it *to*;
+  #   options: NYI / TODO
+  #
+  attr_reader :action
+  attr_reader :subject
+  attr_reader :options
+
+  #
+  # initialize(ACTION, SUBJECT, OPTIONS=[])
+  #
+  def initalize(action, subject, options=[])
+    @action = action; @subject = subject; @options = options
+  end
+
+  #
+  #
   # Ginsu::Bytes
   #
   # Define the size of each type of byte (GB, MB, KB, etc.) for convenience.
