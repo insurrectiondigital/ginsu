@@ -1,6 +1,9 @@
-require 'commander'
 class Ginsu
   class CLI
+    def start
+      puts "TODO: A simpler CLI with fewer dependencies"
+    end
+=begin
     include Commander::Methods
     def start
       program :name, 'ginsu'
@@ -20,5 +23,6 @@ class Ginsu
       end
       run!
     end
+=end
   end
 end

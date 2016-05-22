@@ -99,5 +99,4 @@ Gem::Specification.new do |spec|
   # Runtime dependencies: these SHOULD ship with the packaged gem.
   #
   spec.add_runtime_dependency "toml-rb", "~> 0.3.14"
-  spec.add_runtime_dependency "commander", "~> 4.4.0"
 end
